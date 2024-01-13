@@ -4,6 +4,7 @@ The reason I am making this is because in my college chess is blocked by the fir
 I am learning the two libraries in two different files, and once I know the syntax and generally how to use it, I will try to use it together to make an ascii game of chess, which after I will put it together in pygame to be able to play chess well.
 
 First thing to know is how the Forsyth–Edwards Notation (FEN) works, bellow is how the fields work.
+Also something to know is how the universal chess interface (uci) notation works
 
 A FEN record contains six fields, each separated by a space. The fields are as follows:
 
@@ -18,3 +19,18 @@ A FEN record contains six fields, each separated by a space. The fields are as f
     Halfmove clock: The number of halfmoves since the last capture or pawn advance, used for the fifty-move rule.
     
     Fullmove number: The number of the full moves. It starts at 1 and is incremented after Black's move.
+
+The UCI notation has 3 fields without seperation and it works as follows:
+
+    The first chess piece location is described, which for example d2 which in the starting position is the queenside pawn.
+    The second chess piece location is then described, which following the example above would be d4 which would move the queenside pawn forward 2.
+    The third field is for if it is a promotion of a pawn, and if so, what it is promoting to, for example it would be q which is it promoting to a queen.
+
+    All of this together would show d2d4 for a standard move, and if it was a promotion it would be something like d7d8q.
+
+    Promotion: noting from above, the third field can be put as any of the types of pieces that you may want, it can be one of r (rook), n (knight), b (bishop) or q (queen). It would be put at the end of the uci notation unless no promotion will occur, which then it would not be put down.
+
+    Castling: If there is a need to castle, when following chess rules you would do e1c1 for queenside, and e1g1 for kingside, it would be different for black's castling as it is on the opposite side of the board.
+
+    
+
