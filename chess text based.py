@@ -4,7 +4,7 @@ import os, time
 
 # Initializes an empty chess board
 board = chess.Board()
-stockfish = Stockfish(r"C:\stockfish\stockfish-windows-x86-64-avx2.exe")
+stockfish = Stockfish(r"M:\stockfish\stockfish-windows-x86-64-avx2.exe")
 fen = board.fen() 
 
 # variables for other things
@@ -51,8 +51,10 @@ def game():
 
         print_board()
         
-        if board.turn == True:
+        if board.turn == True and not game_mode in vs_bot:
             print(f"It is {who_turn[0]}'s turn.")
+        elif board.turn == True and game_mode in vs_bot:
+            print(f"It is your turn.")
         else:
             print(f"It is {who_turn[1]}'s turn.")
             
