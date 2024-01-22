@@ -8,6 +8,8 @@ size = (840, 840)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Chess Game")
 
+
+
 # set up the board
 board = pygame.Surface((800, 800))
 board_grid = {
@@ -77,18 +79,90 @@ board_grid = {
     "h8": {"value": "h8", "position": [[100, 100], [100, 100]]}
 }
 
-# draws the board with alternating colorsches
-#for x in range(0, 8): # --> for x in range(start, stop, step):
-    #for y in range(0, 8):
-        #color = (255, 206, 158) if (x + y) % 2 == 0 else (210, 180, 140)
-        #pygame.draw.rect(board, color, (x * 100, y * 100, 100, 100))
-
+"""uci_names = [
+    "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8",
+    "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8",
+    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8",
+    "d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8",
+    "e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8",
+    "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8",
+    "g1", "g2", "g3", "g4", "g5", "g6", "g7", "g8",
+    "h1", "h2", "h3", "h4", "h5", "h6", "h7", "h8"
+             ]"""
+# draws the board with alternating colours for the squares
 
 for square, data in board_grid.items():
     position = data["position"]
     value = data["value"]
     x, y = position[0][0] - 100, position[0][1] - 100
     width, height = position[1][0], position[1][1]
+
+    a1 = pygame.Rect(x, y, width, height)
+    a2 = pygame.Rect(x, y, width, height)
+    a3 = pygame.Rect(x, y, width, height)
+    a4 = pygame.Rect(x, y, width, height)
+    a5 = pygame.Rect(x, y, width, height)
+    a6 = pygame.Rect(x, y, width, height)
+    a7 = pygame.Rect(x, y, width, height)
+    a8 = pygame.Rect(x, y, width, height)
+    b1 = pygame.Rect(x, y, width, height)
+    b2 = pygame.Rect(x, y, width, height)
+    b3 = pygame.Rect(x, y, width, height)
+    b4 = pygame.Rect(x, y, width, height)
+    b5 = pygame.Rect(x, y, width, height)
+    b6 = pygame.Rect(x, y, width, height)
+    b7 = pygame.Rect(x, y, width, height)
+    b8 = pygame.Rect(x, y, width, height)
+    c1 = pygame.Rect(x, y, width, height)
+    c2 = pygame.Rect(x, y, width, height)
+    c3 = pygame.Rect(x, y, width, height)
+    c4 = pygame.Rect(x, y, width, height)
+    c5 = pygame.Rect(x, y, width, height)
+    c6 = pygame.Rect(x, y, width, height)
+    c7 = pygame.Rect(x, y, width, height)
+    c8 = pygame.Rect(x, y, width, height)
+    d1 = pygame.Rect(x, y, width, height)
+    d2 = pygame.Rect(x, y, width, height)
+    d3 = pygame.Rect(x, y, width, height)
+    d4 = pygame.Rect(x, y, width, height)
+    d5 = pygame.Rect(x, y, width, height)
+    d6 = pygame.Rect(x, y, width, height)
+    d7 = pygame.Rect(x, y, width, height)
+    d8 = pygame.Rect(x, y, width, height)
+    e1 = pygame.Rect(x, y, width, height)
+    e2 = pygame.Rect(x, y, width, height)
+    e3 = pygame.Rect(x, y, width, height)
+    e4 = pygame.Rect(x, y, width, height)
+    e5 = pygame.Rect(x, y, width, height)
+    e6 = pygame.Rect(x, y, width, height)
+    e7 = pygame.Rect(x, y, width, height)
+    e8 = pygame.Rect(x, y, width, height)
+    f1 = pygame.Rect(x, y, width, height)
+    f2 = pygame.Rect(x, y, width, height)
+    f3 = pygame.Rect(x, y, width, height)
+    f4 = pygame.Rect(x, y, width, height)
+    f5 = pygame.Rect(x, y, width, height)
+    f6 = pygame.Rect(x, y, width, height)
+    f7 = pygame.Rect(x, y, width, height)
+    f8 = pygame.Rect(x, y, width, height)
+    g1 = pygame.Rect(x, y, width, height)
+    g2 = pygame.Rect(x, y, width, height)
+    g3 = pygame.Rect(x, y, width, height)
+    g4 = pygame.Rect(x, y, width, height)
+    g5 = pygame.Rect(x, y, width, height)
+    g6 = pygame.Rect(x, y, width, height)
+    g7 = pygame.Rect(x, y, width, height)
+    g8 = pygame.Rect(x, y, width, height)
+    h1 = pygame.Rect(x, y, width, height)
+    h2 = pygame.Rect(x, y, width, height)
+    h3 = pygame.Rect(x, y, width, height)
+    h4 = pygame.Rect(x, y, width, height)
+    h5 = pygame.Rect(x, y, width, height)
+    h6 = pygame.Rect(x, y, width, height)
+    h7 = pygame.Rect(x, y, width, height)
+    h8 = pygame.Rect(x, y, width, height)
+    
+
     color = (255, 206, 158) if (x + y) % 2 == 0 else (210, 180, 140)
     pygame.draw.rect(board, color, (x, y, width, height))
     font = pygame.font.Font(None, 16)
@@ -97,10 +171,31 @@ for square, data in board_grid.items():
     board.blit(text, text_rect)
 
 
+    
+
+
+
+
 # add the board to the screen
 screen.blit(board, (20, 20))
-
 pygame.display.flip()
+
+# setting up the pieces
+pieces = {
+    "white_pawn": pygame.image.load(r"Pieces/white_pawn.png"),
+    "white_rook": pygame.image.load(r"Pieces/white_rook.png"),
+    "white_knight": pygame.image.load(r"Pieces/white_knight.png"),
+    "white_bishop": pygame.image.load(r"Pieces/white_bishop.png"),
+    "white_queen": pygame.image.load(r"Pieces/white_queen.png"),
+    "white_king": pygame.image.load(r"Pieces/white_king.png"),
+    "black_pawn": pygame.image.load(r"Pieces/black_pawn.png"),
+    "black_rook": pygame.image.load(r"Pieces/black_rook.png"),
+    "black_knight": pygame.image.load(r"Pieces/black_knight.png"),
+    "black_bishop": pygame.image.load(r"Pieces/black_bishop.png"),
+    "black_queen": pygame.image.load(r"Pieces/black_queen.png"),
+    "black_king": pygame.image.load(r"Pieces/black_king.png")
+}
+
 
 # main loop
 while True:
