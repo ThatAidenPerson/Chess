@@ -1,7 +1,5 @@
-This is me learning how to use the libraries chess and stockfish, which are both going to eventually be used to make a chess game
-The reason I am making this is because in my college chess is blocked by the firewall, and because I enjoy chess, I want to play it, so I am going to make it in python using pygame.
-
-I am learning the two libraries in two different files, and once I know the syntax and generally how to use it, I will try to use it together to make an ascii game of chess, which after I will put it together in pygame to be able to play chess well.
+This is me learning how to use the libraries chess and stockfish, which are both going to eventually be used to make a chess game.
+The reason I am making this is because in my college chess is blocked, and because I enjoy chess, I want to play it, so I am going to make it in python using pygame.
 
 First thing to know is how the Forsyth–Edwards Notation (FEN) works, bellow is how the fields work.
 Also something to know is how the universal chess interface (uci) notation works
@@ -33,4 +31,21 @@ The UCI notation has 3 fields without seperation and it works as follows:
     Castling: If there is a need to castle, when following chess rules you would do e1c1 for queenside, and e1g1 for kingside, it would be different for black's castling as it is on the opposite side of the board.
 
     
+
+Engines that could be used/should be learnt:
+maia chess
+stockfish
+maybe crazyara
+
+Below shown is the link for the documentation for the chess library:
+https://python-chess.readthedocs.io/en/latest/
+
+and also you will need to download stockfish:
+https://stockfishchess.org/
+
+which you would need to link the path of the executable to stockfish so you can use it:
+
+```
+stockfish = Stockfish(r"M:\stockfish\stockfish-windows-x86-64-avx2.exe")
+```
 
