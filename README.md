@@ -1,4 +1,4 @@
-This is me learning how to use the libraries chess and stockfish, which are both going to eventually be used to make a chess game
+This is me learning how to use the libraries chess and stockfish, which are both going to eventually be used to make a chess game.
 The reason I am making this is because in my college chess is blocked, and because I enjoy chess, I want to play it, so I am going to make it in python using pygame.
 
 
