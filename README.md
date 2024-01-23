@@ -1,7 +1,6 @@
 This is me learning how to use the libraries chess and stockfish, which are both going to eventually be used to make a chess game
-The reason I am making this is because in my college chess is blocked by the firewall, and because I enjoy chess, I want to play it, so I am going to make it in python using pygame.
+The reason I am making this is because in my college chess is blocked, and because I enjoy chess, I want to play it, so I am going to make it in python using pygame.
 
-I am learning the two libraries in two different files, and once I know the syntax and generally how to use it, I will try to use it together to make an ascii game of chess, which after I will put it together in pygame to be able to play chess well.
 
 First thing to know is how the Forsyth–Edwards Notation (FEN) works, bellow is how the fields work.
 Also something to know is how the universal chess interface (uci) notation works
