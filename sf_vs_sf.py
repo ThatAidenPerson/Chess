@@ -2,7 +2,7 @@ import chess
 from stockfish import Stockfish
 import os, time
 
-board = chess.Board()
+board = chess.Board("rnbqkbnr/ppppppp1/8/P7/6Pp/8/1PPPPP1P/RNBQKBNRrnbqkbnr b KQkq g3 0 3")
 stockfish = Stockfish(r"M:\stockfish\stockfish-windows-x86-64-avx2.exe")
 fen = board.fen()
 
