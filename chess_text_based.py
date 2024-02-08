@@ -4,7 +4,7 @@ import os, time
 
 # Initializes an empty chess board
 board = chess.Board()
-stockfish = Stockfish(r"M:\stockfish\stockfish-windows-x86-64-avx2.exe")
+stockfish = Stockfish(r"C:\stockfish\stockfish-windows-x86-64-avx2.exe") #for college, change to M at the start, for home, change to C
 fen = board.fen() 
 
 # variables for other things
