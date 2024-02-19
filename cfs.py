@@ -10,8 +10,6 @@ def setup_board(starting_fen):
 
     
     split_fen = fen.split()
-    print(split_fen)
-    print(fen)
     split_locations = [[],[],[],[],[],[],[],[]] 
     level = 0
     turn = None
